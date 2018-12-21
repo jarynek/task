@@ -7,7 +7,12 @@ class HomepageController {
     constructor(options) {
         this.options = options;
 
-        Ui.aside();
+        try{
+            Ui.aside();
+            Ui.hamburgerMenu();
+        }catch (e) {
+            console.log(e);
+        }
     }
 
     run(){

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <title>Task from Aukro</title>
@@ -10,15 +10,19 @@
     <!-- Header -->
     <header id="header">
         <div class="header">
-            <div class="row">
+            <div class="row mobile-lock">
                 <div class="column size1of3">
-                    <a href="#" class="logo" title="Logo Aukro">
+                    <a href="#" class="logo margin-tp-4" title="Logo Aukro">
                         <img src="./images/logos/logo.png" alt="Logo Aukro">
                     </a>
                 </div>
-                <div class="column size2of3">
+                <div class="column size2of3 text-right">
+                    <span data-click="hamburger" class="btn default">Menu</span>
                     <nav>
                         <div class="nav">
+                            <div class="nav-bar show-for-small margin-bt-20">
+                                <span data-click="hamburger" class="btn show-for-small">Close</span>
+                            </div>
                             <ul>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Article items</a>
@@ -30,7 +34,26 @@
                                         <li><a href="#form" title="Form">Form</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" title="Item 2">Item 2</a>
+                                    <ul>
+                                        <li><a href="#head" title="Head">Head</a></li>
+                                        <li><a href="#abstract" title="abstract">Abstract</a></li>
+                                        <li><a href="#shop" title="Shop">Shop</a></li>
+                                        <li><a href="#table" title="Table">Table</a></li>
+                                        <li><a href="#form" title="Form">Form</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="Item 3">Item 3</a>
+                                    <ul>
+                                    <li><a href="#head" title="Head">Head</a></li>
+                                    <li><a href="#abstract" title="abstract">Abstract</a></li>
+                                    <li><a href="#shop" title="Shop">Shop</a></li>
+                                    <li><a href="#table" title="Table">Table</a></li>
+                                    <li><a href="#form" title="Form">Form</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="#" title="Item 4">Item 4</a></li>
+                                <li><a href="#" title="Item 6">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -185,8 +208,8 @@
                             </div>
                             <!–– button ––>
                             <div class="row">
-                                <div class="column size1of1">
-                                    <button class="btn default" type="button">Odeslat</button>
+                                <div class="column size1of1 text-right">
+                                    <button class="btn primary" type="button">Odeslat</button>
                                 </div>
                             </div>
                         </form>
@@ -237,7 +260,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Js scripts -->
     <script src="./assets/js/homepageController.js"></script>
     <script>
