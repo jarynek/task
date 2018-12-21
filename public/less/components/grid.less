@@ -129,6 +129,7 @@
   width: 85.714284%;
 }
 
+/* Mobile */
 @media only screen and (max-width: 768px){
   .row {
     width: auto;
@@ -141,6 +142,23 @@
   }
   .column, [class*="column"] + [class*="column"]:last-child, [class*="column"] + [class*="column"].end:last-child, [class*="column"] + [class*="column"].end {
     float: none;
+  }
+
+  .mobile-lock > .column, .mobile-lock > [class*="column"] + [class*="column"].end, .mobile-lock > [class*="mobile-size"].column {
+    float: left;
+  }
+
+  .mobile-lock .size1of1 {
+    float: none;
+  }
+  .mobile-lock > .size1of2, .row.mobile-lock > .mobile-size1of2 {
+    width: 50% !important;
+  }
+  .mobile-lock > .size1of3, .row.mobile-lock > .mobile-size1of3 {
+    width: 33.333333% !important;
+  }
+  .mobile-lock > .size2of3, .row.mobile-lock > .mobile-size2of3 {
+    width: 66.666666% !important;
   }
 }
 
