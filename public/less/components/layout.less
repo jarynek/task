@@ -1,0 +1,43 @@
+/* Layout */
+.header {
+  border-bottom: solid 1px #e2e2e2;
+  padding: 10px 0;
+  background: #fff;
+}
+
+.footer {
+  border-top: solid 1px #e2e2e2;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.wrapper {
+  padding: 20px 10px;
+  position: relative;
+  display: table;
+
+  &:after {
+    content: '';
+    clear: both;
+  }
+
+  .main {
+    float: left;
+    width: calc(100% - 330px);
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .sidebar {
+    width: 320px;
+    float: right;
+    padding: 0 10px;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      float: none;
+      padding: 0;
+    }
+  }
+}

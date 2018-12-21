@@ -20,8 +20,8 @@ gulp.task('scripts', ()=>{
 });
 
 gulp.task('styles', ()=>{
-    return watch('./public/less/**/*.less', function () {
-        gulp.src('./public/less/**/*.less')
+    return watch('./public/less/*.less', function () {
+        gulp.src('./public/less/*.less')
             .pipe(less({
                 paths: [ path.join(__dirname, 'less', 'includes') ]
             }))

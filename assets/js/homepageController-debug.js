@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass Ui {\n\n    static aside() {\n        console.log('aside');\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Ui);\n\n//# sourceURL=webpack:///./public/js/components/ui.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nclass Ui {\n\n    /**\n     * aside\n     */\n    static aside() {\n        window.onscroll = function () {\n            let thisHeader = document.getElementsByClassName('header')[0];\n            let thisBody = document.getElementsByTagName('body')[0];\n\n            if (window.scrollY > thisHeader.getBoundingClientRect().height) {\n                console.log('fixed');\n                thisBody.classList.add('fixed');\n            } else {\n                console.log('float');\n                thisBody.classList.remove('fixed');\n            }\n        };\n    }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Ui);\n\n//# sourceURL=webpack:///./public/js/components/ui.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass Ui {\n\n    static asid
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ui */ \"./public/js/components/ui.js\");\n\n\n/**\r\n * HomepageController\r\n */\nclass HomepageController {\n    constructor(options) {\n        this.options = options;\n\n        _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].aside();\n    }\n\n    run() {\n        console.log(this.options);\n    }\n}\n\nwindow.HomepageController = HomepageController;\n\n//# sourceURL=webpack:///./public/js/homepageController.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ui */ \"./public/js/components/ui.js\");\n\n\n/**\n * HomepageController\n */\nclass HomepageController {\n    constructor(options) {\n        this.options = options;\n\n        _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].aside();\n    }\n\n    run() {\n        console.log(this.options);\n    }\n}\n\nwindow.HomepageController = HomepageController;\n\n//# sourceURL=webpack:///./public/js/homepageController.js?");
 
 /***/ })
 

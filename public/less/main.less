@@ -1,34 +1,5 @@
 @import "components/grid";
-/* Table object */
-table{
-  &.format {
-
-    width: 100%;
-    border-collapse: collapse;
-    border: solid 1px #d4d4d4;
-    th {
-      text-align: left;
-      padding: 10px;
-    }
-    td {
-      padding: 10px;
-    }
-    thead {
-      background: #ececec;
-      tr {
-        border-bottom: solid 2px #d4d4d4;
-      }
-    }
-    tfoot {
-      background: #ececec;
-      tr {
-        border-top: solid 2px #d4d4d4;
-      }
-    }
-    tbody {
-      tr + tr {
-        border-top: solid 1px #d4d4d4;
-      }
-    }
-  }
-}
+@import "components/layout";
+@import "components/ui";
+@import "components/atomic";
+@import "components/form";

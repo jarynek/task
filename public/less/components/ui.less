@@ -1,0 +1,149 @@
+/* Default styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4C4C4C;
+  background: #f8f8f8;
+  &.fixed {
+    .sidebar {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 20px;
+    }
+  }
+}
+
+img, object, embed, iframe {
+  max-width: 100%
+}
+
+iframe {
+  max-width: 100% !important
+}
+
+img {
+  height: auto;
+  -ms-interpolation-mode: bicubic
+}
+
+h1 {
+  font-size: 34px;
+  letter-spacing: -.325px;
+  margin-top: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -.33px;
+}
+
+a {
+  color: #1e81d6;
+}
+
+/* Table object */
+table {
+  &.format {
+
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px #d4d4d4;
+
+    th {
+      text-align: left;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    thead {
+      background: #ececec;
+
+      tr {
+        border-bottom: solid 2px #d4d4d4;
+      }
+    }
+
+    tfoot {
+      background: #ececec;
+
+      tr {
+        border-top: solid 2px #d4d4d4;
+      }
+    }
+
+    tbody {
+      tr + tr {
+        border-top: solid 1px #d4d4d4;
+      }
+    }
+  }
+}
+
+.logo{
+  height: 60px;
+  display: block;
+  width: 120px;
+}
+
+.nav {
+  li {
+    display: inline-block;
+    background: navajowhite;
+  }
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: #4435c2;
+  height: 600px;
+
+  &:before {
+    color: white;
+    content: 'Banner';
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+/* Shop */
+.card {
+  background: #ffffff;
+  padding: 10px;
+  border: solid 1px #eaeaea;
+
+  &:hover {
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+
+  .header-hd {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  p {
+    margin: 6px 0;
+  }
+}
