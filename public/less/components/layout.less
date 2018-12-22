@@ -3,6 +3,13 @@
   border-bottom: solid 1px #e2e2e2;
   padding: 10px 0;
   background: #fff;
+  @media only screen and (max-width:767px){
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
 }
 
 .footer {
@@ -15,6 +22,9 @@
   padding: 20px 10px;
   position: relative;
   display: table;
+  @media only screen and (max-width:767px){
+    padding-top: 69px;
+  }
 
   &:after {
     content: '';

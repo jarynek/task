@@ -10,6 +10,7 @@ class HomepageController {
         try{
             Ui.aside();
             Ui.hamburgerMenu();
+            Ui.toggleBox();
         }catch (e) {
             console.log(e);
         }
