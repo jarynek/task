@@ -1,3 +1,6 @@
+/**
+ * User interface class
+ */
 class Ui {
 
     /**
@@ -17,7 +20,7 @@ class Ui {
     }
 
     /**
-     * hHamburger menu
+     * Hamburger menu
      */
     static hamburgerMenu() {
 
@@ -34,11 +37,16 @@ class Ui {
          * Click on hamburger trigger
          */
         thisEl.forEach((item) => {
-            item.addEventListener('click',() => {
+            item.addEventListener('click',(event) => {
+
+                let thisEl = event.target;
+
                 if(thisMenu[0].classList.contains('open')){
                     thisMenu[0].classList.remove('open');
+                    thisEl.classList.remove('active');
                 }else{
                     thisMenu[0].classList.add('open');
+                    thisEl.classList.add('active');
                 }
             });
         });
@@ -67,12 +75,14 @@ class Ui {
             item.addEventListener('click',() => {
                 let thisBox = item.parentNode;
 
+                if(!thisBox){
+                    throw 'not thisBox';
+                }
+
                 if(thisBox.classList.contains('open')){
                     thisBox.classList.remove('open');
-                    item.textContent = 'open';
                 }else{
                     thisBox.classList.add('open');
-                    item.textContent = 'close';
                 }
             });
         });

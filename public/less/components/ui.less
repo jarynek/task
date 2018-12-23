@@ -103,6 +103,22 @@ table {
   }
 }
 
+/* Hamburger */
+.icon-hamburger {
+  cursor: pointer;
+  position: relative;
+  font-size: 28px;
+  &.active {
+    &:before{
+      content: '\ea0f';
+      font-size: 24px;
+    }
+  }
+  &:before{
+    content: '\e9bd';
+  }
+}
+
 /* Nav */
 .nav {
   ul {
@@ -177,7 +193,7 @@ table {
               }
             }
           }
-          .opener {
+          .icon-opener {
             display: none;
           }
         }
@@ -189,10 +205,10 @@ table {
       width: 0;
       position: fixed;
       z-index: 3;
-      top: 59px;
+      top: 52px;
       padding-top: 40px;
       right: 0;
-      background-color: #f3f3f3;
+      background-color: #f8f8f8;
       overflow-x: hidden;
       transition: all 0.2s;
       opacity: 0;
@@ -230,18 +246,26 @@ table {
             text-align: center;
             display: none;
           }
-          .opener {
-            font-size: 14px;
+          .icon-opener {
             color: #000;
-            border: solid 1px;
             padding: 3px 6px;
-            border-radius: 2px;
             cursor: pointer;
+            position: relative;
+            font-size: 20px;
+            &:before {
+              display: inline-block;
+              content: '\e900';
+            }
           }
           &.open {
             background: rgba(0,0,0, 0.08);
             & > ul {
               display: block;
+            }
+            .icon-opener {
+              &:before {
+                transform: rotate(180deg);
+              }
             }
           }
         }
@@ -253,14 +277,6 @@ table {
 /* Menu */
 .menu {
   position: relative;
-}
-
-/* Hamburger */
-span[data-click="hamburger"] {
-  display: none;
-  @media only screen and (max-width: 767px){
-    display: inline-block;
-  }
 }
 
 /* Banner */
