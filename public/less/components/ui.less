@@ -108,6 +108,9 @@ table {
   cursor: pointer;
   position: relative;
   font-size: 28px;
+  display: none;
+  width: 30px;
+  text-align: center;
   &.active {
     &:before{
       content: '\ea0f';
@@ -116,6 +119,9 @@ table {
   }
   &:before{
     content: '\e9bd';
+  }
+  @media only screen and (max-width: 767px){
+    display: inline-block;
   }
 }
 
@@ -138,6 +144,12 @@ table {
       ul {
         li {
           position: relative;
+          &.children {
+            &:after {
+              font-family: 'icomoon';
+              content: '\e900';
+            }
+          }
           &:hover {
             ul {
               display: block;
@@ -205,7 +217,7 @@ table {
       width: 0;
       position: fixed;
       z-index: 3;
-      top: 56px;
+      top: 52px;
       padding-top: 40px;
       right: 0;
       background-color: #f8f8f8;
@@ -282,7 +294,7 @@ table {
 /* Banner */
 .banner {
   position: relative;
-  background: #4435c2;
+  background: #f75e00;
   height: 600px;
 
   &:before {
