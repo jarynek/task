@@ -104,6 +104,12 @@ table {
   }
 }
 
+.main-img {
+  @media only screen and (max-width:767px) {
+    margin: -18px -11px -10px -11px;
+  }
+}
+
 /* Hamburger */
 .icon-hamburger {
   cursor: pointer;
@@ -146,9 +152,14 @@ table {
         li {
           position: relative;
           &.children {
-            &:after {
-              font-family: 'icomoon';
-              content: '\e900';
+            & > a {
+              &:after {
+                font-family: icomoon;
+                content: '\e900';
+                position: relative;
+                top: 2px;
+                margin-left: 4px;
+              }
             }
           }
           &:hover {
@@ -326,7 +337,7 @@ table {
     cursor: pointer;
   }
   .img {
-    margin: -10px -10px 10px -10px;
+    margin: -10px -10px 0 -10px;
   }
   .header-hd {
     font-size: 16px;
@@ -347,12 +358,18 @@ table {
   }
   @media only screen and (max-width: 767px){
     margin: 0 -10px;
+    padding: 10px 0;
     border-bottom: solid 1px #e2e2e2;
     border-left: 0;
     border-right: 0;
     border-top: 0;
     &.first-in-row {
       border-top: solid 1px #e2e2e2;
+    }
+    .row {
+      &.gap-0_5x {
+        margin: 0;
+      }
     }
   }
 }
