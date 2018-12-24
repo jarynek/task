@@ -57,39 +57,62 @@ a {
 /* Table */
 table {
   &.format {
-
     width: 100%;
     border-collapse: collapse;
     border: solid 1px #d4d4d4;
-
+    @media screen and (max-width:767px){
+      border: 0;
+    }
     th {
       text-align: left;
       padding: 10px;
     }
-
     td {
       padding: 10px;
+      @media screen and (max-width:767px){
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        &:before {
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+        }
+      }
     }
-
     thead {
       background: #ececec;
-
       tr {
         border-bottom: solid 2px #d4d4d4;
       }
+      @media screen and (max-width:767px){
+        display: none;
+      }
     }
-
     tfoot {
       background: #ececec;
-
       tr {
         border-top: solid 2px #d4d4d4;
       }
+      @media screen and (max-width:767px){
+        display: none;
+      }
     }
-
     tbody {
+      tr {
+        @media screen and (max-width:767px){
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: .625em;
+        }
+      }
       tr + tr {
         border-top: solid 1px #d4d4d4;
+      }
+      @media screen and (max-width:767px) {
+        tr {
+          border: solid 1px #d4d4d4;
+        }
       }
     }
   }
@@ -343,6 +366,13 @@ table {
   .header-hd {
     font-size: 16px;
     margin: 0;
+    & > a {
+      color: #000;
+      &:hover {
+        text-decoration: none;
+        color: #f75e00;
+      }
+    }
   }
   .price {
     display: block;
