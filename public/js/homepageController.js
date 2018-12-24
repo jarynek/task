@@ -5,6 +5,7 @@ import Ui from './components/ui';
  */
 class HomepageController {
     constructor(options) {
+
         this.options = options;
 
         try{
@@ -14,10 +15,6 @@ class HomepageController {
         }catch (e) {
             console.log(e);
         }
-    }
-
-    run(){
-        console.log(this.options);
     }
 }
 
