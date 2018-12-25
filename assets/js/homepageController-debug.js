@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/**\n * User interface class\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ui */ \"./public/js/components/ui.js\");\n\n\n/**\n * HomepageController\n */\nclass HomepageController {\n    constructor(options) {\n\n        this.options = options;\n\n        try {\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].aside();\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].hamburgerMenu();\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].toggleBox();\n        } catch (e) {\n            console.log(e);\n        }\n    }\n}\n\nwindow.HomepageController = HomepageController;\n\n//# sourceURL=webpack:///./public/js/homepageController.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ui */ \"./public/js/components/ui.js\");\n\n\n/**\n * HomepageController\n */\nclass HomepageController {\n    constructor(options) {\n\n        this.options = options;\n\n        try {\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].aside();\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].hamburgerMenu();\n            _components_ui__WEBPACK_IMPORTED_MODULE_0__[\"default\"].toggleBox();\n        } catch (e) {\n            console.log(e);\n        }\n    }\n}\n\nnew HomepageController('index');\n\n//# sourceURL=webpack:///./public/js/homepageController.js?");
 
 /***/ })
 

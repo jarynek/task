@@ -18,7 +18,7 @@ class HomepageController {
     }
 }
 
-window.HomepageController = HomepageController;
+new HomepageController('index');
 
 
 

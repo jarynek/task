@@ -138,6 +138,47 @@
   width: 85.714284%;
 }
 
+/* Tablet */
+@media only screen and (max-width: 768px) {
+
+  .w768-lock>[class*="column"]+[class*="column"]:last-child {
+    float: right
+  }
+
+  .w768-lock>.column,.w768-lock>[class*="column"]+[class*="column"].end,.w768-lock>[class*="mobile-size"].column {
+    float: left
+  }
+
+  .w768-size1of1 {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .w768-lock>.size1of3,.row.w768-lock>.w768-size1of3 {
+    width: 33.333333% !important;
+  }
+
+  .w768-lock>.size2of3,.row.w768-lock>.w768-size2of3 {
+    width: 66.666666% !important
+  }
+
+  .w768-size1of5 {
+    width: 20% !important
+  }
+
+  .w768-size2of5 {
+    width: 40% !important
+  }
+
+  .w768-size3of5 {
+    width: 60% !important
+  }
+
+  .w768-size4of5 {
+    width: 80% !important
+  }
+}
+
 /* Mobil */
 @media only screen and (max-width: 767px) {
   body {
