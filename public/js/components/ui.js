@@ -102,6 +102,11 @@ class Ui {
 
         thisLinks.forEach((item) => {
             item.addEventListener('click', () => {
+
+                if(window.outerWidth > 767){
+                    return;
+                }
+
                 location.reload();
             });
         });
