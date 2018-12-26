@@ -91,23 +91,28 @@ class Ui {
     }
 
     /**
-     * pageReload
+     * Close Menu if devices is smaller then 768 to see section of page
      */
-    static pageReload() {
-        let thisLinks = document.querySelectorAll('[data-click="reload"]');
+    static closeMenu() {
 
-        if(!thisLinks){
+        let thisLinks = document.querySelectorAll('[data-click="reload"]');
+        let thisTrigger = document.querySelectorAll('[data-click="hamburger"]');
+
+        if (!thisLinks) {
             return;
+        } else if (!thisTrigger) {
+            throw 'not thisTrigger';
         }
 
         thisLinks.forEach((item) => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (event) => {
 
-                if(window.outerWidth > 767){
+                if (window.innerWidth > 767) {
                     return;
                 }
 
-                location.reload();
+                thisTrigger[0].click();
+
             });
         });
 
