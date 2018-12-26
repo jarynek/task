@@ -1,4 +1,17 @@
 /* Layout */
+.page {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 300px;
+  background: #f8f8f8;
+  -moz-box-shadow: 5px 5px 5px #00000021;
+  -webkit-box-shadow: 5px 5px 5px #00000021;
+  box-shadow: 5px 5px 5px #00000021;
+  @media only screen and (max-width: 767px){
+    margin-bottom: 200px;
+  }
+}
+
 .header {
   border-bottom: solid 1px #e2e2e2;
   padding: 10px 0;

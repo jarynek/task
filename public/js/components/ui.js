@@ -8,6 +8,7 @@ class Ui {
      */
     static aside() {
         window.onscroll = function () {
+
             let thisHeader = document.getElementsByClassName('header')[0];
             let thisBody = document.getElementsByTagName('body')[0];
 
@@ -29,7 +30,7 @@ class Ui {
 
         if (!thisEl) {
             throw 'not thisEl';
-        }else if(!thisMenu){
+        } else if (!thisMenu) {
             throw 'not thisMenu'
         }
 
@@ -37,14 +38,14 @@ class Ui {
          * Click on hamburger trigger
          */
         thisEl.forEach((item) => {
-            item.addEventListener('click',(event) => {
+            item.addEventListener('click', (event) => {
 
                 let thisEl = event.target;
 
-                if(thisMenu[0].classList.contains('open')){
+                if (thisMenu[0].classList.contains('open')) {
                     thisMenu[0].classList.remove('open');
                     thisEl.classList.remove('active');
-                }else{
+                } else {
                     thisMenu[0].classList.add('open');
                     thisEl.classList.add('active');
                 }
@@ -54,7 +55,7 @@ class Ui {
         /**
          * Scroll nav fixed toolbar
          */
-        thisMenu[0].addEventListener('scroll', (event)=>{
+        thisMenu[0].addEventListener('scroll', (event) => {
             let thisEl = event.target;
             thisEl.classList.add('in-scroll');
         });
@@ -63,7 +64,7 @@ class Ui {
     /**
      * Toggle box
      */
-    static toggleBox(){
+    static toggleBox() {
 
         let thisEl = document.querySelectorAll('[data-click="toggle"]');
 
@@ -72,18 +73,36 @@ class Ui {
         }
 
         thisEl.forEach((item) => {
-            item.addEventListener('click',() => {
+            item.addEventListener('click', () => {
                 let thisBox = item.parentNode;
 
-                if(!thisBox){
+                if (!thisBox) {
                     throw 'not thisBox';
                 }
 
-                if(thisBox.classList.contains('open')){
+                if (thisBox.classList.contains('open')) {
                     thisBox.classList.remove('open');
-                }else{
+                } else {
                     thisBox.classList.add('open');
                 }
+            });
+        });
+
+    }
+
+    /**
+     * pageReload
+     */
+    static pageReload() {
+        let thisLinks = document.querySelectorAll('[data-click="reload"]');
+
+        if(!thisLinks){
+            return;
+        }
+
+        thisLinks.forEach((item) => {
+            item.addEventListener('click', () => {
+                location.reload();
             });
         });
 

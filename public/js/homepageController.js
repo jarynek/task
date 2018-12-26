@@ -12,6 +12,7 @@ class HomepageController {
             Ui.aside();
             Ui.hamburgerMenu();
             Ui.toggleBox();
+            Ui.pageReload();
         }catch (e) {
             console.log(e);
         }
