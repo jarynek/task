@@ -105,7 +105,7 @@ class Ui {
         }
 
         thisLinks.forEach((item) => {
-            item.addEventListener('click', (event) => {
+            item.addEventListener('click', () => {
 
                 if (window.innerWidth > 767) {
                     return;
